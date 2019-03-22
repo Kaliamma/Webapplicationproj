@@ -41,8 +41,8 @@ Public Class Frontendform
 
     Private Sub CreateService()
 
-        Dim ClientId = "298236013091-6pcu43ooas74vrnpajku6fu6p4gct4qd.apps.googleusercontent.com "
-        Dim ClientSecret = "mFxduvUwzqqaENce1hOP_fOI"
+        Dim ClientId = "client id"
+        Dim ClientSecret = "client secret"
         Dim MyUserCredential As UserCredential = GoogleWebAuthorizationBroker.AuthorizeAsync(New ClientSecrets() With {.ClientId = ClientId, .ClientSecret = ClientSecret}, {DriveService.Scope.Drive}, "user", CancellationToken.None).Result
             Service = New DriveService(New BaseClientService.Initializer() With {.HttpClientInitializer = MyUserCredential, .ApplicationName = "Google Drive VB Dot Net"})
 
